@@ -50,7 +50,7 @@ RUN cd /root && \
 
 # Install tools for node
 RUN root/.nodebrew/current/bin/npm install -g bower && \
-    root/.nodebrew/current/bin/npm install -g grunt && \
+    root/.nodebrew/current/bin/npm install -g grunt
 
 # Prepare working volume
 RUN mkdir /root/project
