@@ -53,12 +53,12 @@ WORKDIR /home/yoichiro6642
 
 # Install nodebrew
 RUN curl -L git.io/nodebrew | perl - setup && \
-    .nodebrew/current/bin/nodebrew install-binary v8.15.0 && \
-    .nodebrew/current/bin/nodebrew use v8.15.0
+    $HOME/.nodebrew/current/bin/nodebrew install-binary v8.15.0 && \
+    $HOME/.nodebrew/current/bin/nodebrew use v8.15.0
 
 # Install tools for node
-RUN .nodebrew/current/bin/npm install -g bower && \
-    .nodebrew/current/bin/npm install -g grunt
+RUN $HOME/.nodebrew/current/bin/npm install -g bower && \
+    $HOME/.nodebrew/current/bin/npm install -g grunt
 
 # Prepare working volume
 WORKDIR /home/yoichiro6642/project
